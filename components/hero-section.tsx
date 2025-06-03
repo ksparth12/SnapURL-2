@@ -12,6 +12,16 @@ import { useIntersectionObserver } from "@/lib/use-intersection-observer";
 import { useOptimizedImage } from "@/lib/use-optimized-image";
 import { usePerformance } from "@/context/performance-context";
 
+// Define the type for individual shape objects
+interface ShapeProps {
+  size: string;
+  left: string;
+  top: string;
+  delay: number;
+  duration: number;
+  rotate: string;
+}
+
 // Using memo to prevent unnecessary re-renders
 export const HeroSection = memo(function HeroSection() {
   const [demoUrl, setDemoUrl] = useState("https://example.com/very-long-url-that-needs-shortening");
@@ -125,7 +135,7 @@ export const HeroSection = memo(function HeroSection() {
 
   // Memoize expensive parts of the component with performance adaptations
   const MemoizedShapes = memo(({ shapes, isVisible, prefersReducedMotion }: { 
-    shapes: typeof shapes, 
+    shapes: ShapeProps[], 
     isVisible: boolean,
     prefersReducedMotion: boolean
   }) => {
