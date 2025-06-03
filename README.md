@@ -24,7 +24,7 @@ A modern URL shortening web application with analytics and tracking capabilities
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/SnapURL.git
+   git clone https://github.com/ksparth12/SnapURL-2.git
    cd SnapURL
    ```
 
