@@ -1,0 +1,23 @@
+{
+  "name": "SnapURL",
+  "short_name": "SnapURL",
+  "description": "A modern URL shortener for creating concise, shareable links",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#06B6D4",
+  "icons": [
+    {
+      "src": "/SnapURL.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/SnapURL.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+} 
