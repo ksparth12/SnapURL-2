@@ -1,10 +1,10 @@
 import { ContactForm } from '@/components/contact/contact-form';
-import { ContactInfo } from '@/components/contact/contact-info';
+import { ContactInfo } from '@/components/contact/contact-info-new';
 import { ContactHero } from '@/components/contact/contact-hero';
 
 export const metadata = {
-  title: 'Contact Me | Parth Sharma',
-  description: 'Get in touch with Parth Sharma for collaboration, questions, or just to say hello.',
+  title: 'Contact Me | K Spar',
+  description: 'Get in touch with K Spar for collaboration, questions, or just to say hello.',
 };
 
 export default function Contact() {
