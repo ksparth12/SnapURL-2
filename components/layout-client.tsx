@@ -37,23 +37,28 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(timer);
   }, []);
   
-  // Page transition variants
+  // Enhanced page transition variants for smoother navigation
   const pageVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: { 
         type: 'spring',
-        stiffness: 100, 
-        damping: 15,
-        duration: 0.4 
+        stiffness: 120, 
+        damping: 20,
+        mass: 0.8,
+        velocity: 2,
+        duration: 0.5 
       }
     },
     exit: { 
       opacity: 0, 
-      y: -20,
-      transition: { duration: 0.2 } 
+      y: -10,
+      transition: { 
+        duration: 0.3,
+        ease: 'easeInOut'
+      } 
     }
   };
   

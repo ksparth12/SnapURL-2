@@ -71,7 +71,7 @@ export const FeatureShowcase = memo(function FeatureShowcase() {
   };
 
   return (
-    <section className="container py-16 md:py-24">
+    <section id="features-section" className="container py-16 md:py-24">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Powerful Features

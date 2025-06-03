@@ -73,6 +73,14 @@ export function Navbar() {
                           ? "text-green-600 bg-green-100/50 dark:bg-green-900/30 shadow-sm"
                           : "text-foreground/70 hover:bg-green-50/50 dark:hover:bg-green-900/20"
                       )}
+                      onClick={(e) => {
+                        // Add subtle animation effect without changing visual appearance
+                        const target = e.currentTarget;
+                        target.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                          target.style.transform = 'scale(1)';
+                        }, 150);
+                      }}
                     >
                       <IconComponent className={cn("h-4 w-4 transition-all", pathname === href ? "text-green-600" : "text-foreground/60 group-hover:text-green-600")} />
                       <span>{label}</span>
@@ -131,7 +139,15 @@ export function Navbar() {
                   <Link 
                     key={href} 
                     href={href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => {
+                      // Add subtle animation effect without changing visual appearance
+                      const target = e.currentTarget;
+                      target.style.transform = 'scale(0.98)';
+                      setTimeout(() => {
+                        target.style.transform = 'scale(1)';
+                        setIsOpen(false);
+                      }, 150);
+                    }}
                     className={cn(
                       "card-hover px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 flex items-center gap-3 hover:translate-x-1",
                       pathname === href 

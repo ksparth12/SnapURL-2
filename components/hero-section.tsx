@@ -4,7 +4,6 @@ import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-mo
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState, useEffect, useRef, memo, useMemo, useCallback } from "react";
-import Link from "next/link";
 import { ArrowRight, ExternalLink, Copy, CheckCircle2, Link2, Check, Loader2, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { throttle, optimizedImageLoader, debounce, domBatch } from "@/lib/performance";
@@ -281,12 +280,12 @@ export const HeroSection = memo(function HeroSection() {
             </motion.p>
             
             <motion.div variants={item} className="flex flex-wrap gap-4 mb-12">
-              <Button size="lg" className="h-12 px-8 rounded-xl shadow-lg btn-hover font-medium group bg-green-500 hover:bg-green-600 text-white hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] dark:hover:shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+              <Button size="lg" className="h-12 px-8 rounded-xl shadow-lg btn-hover font-medium group bg-green-500 hover:bg-green-600 text-white hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] dark:hover:shadow-[0_0_15px_rgba(34,197,94,0.3)]" onClick={() => document.getElementById('url-shortener-box')?.scrollIntoView({ behavior: 'smooth' })}>
                 Start Shortening
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
               
-              <Button size="lg" variant="outline" className="h-12 px-8 rounded-xl border-green-500 text-green-500 hover:bg-green-50 hover:text-green-600 backdrop-blur-sm btn-hover">
+              <Button size="lg" variant="outline" className="h-12 px-8 rounded-xl border-green-500 text-green-500 hover:bg-green-50 hover:text-green-600 backdrop-blur-sm btn-hover" onClick={() => document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Features
               </Button>
             </motion.div>
@@ -311,17 +310,11 @@ export const HeroSection = memo(function HeroSection() {
             className="mx-auto max-w-md w-full"
           >
             <motion.div 
-              className="relative z-10 rounded-xl bg-gradient-to-br from-green-600 to-green-800 p-[2px] shadow-lg transition-all duration-300 hover:shadow-green-500/20 dark:hover:shadow-green-700/20"
-              variants={card3d}
-              initial="rest"
-              animate={isHovered ? "hover" : "rest"}
-              onHoverStart={() => setIsHovered(true)}
-              onHoverEnd={() => setIsHovered(false)}
-              style={{
-                transformStyle: "preserve-3d",
-                perspective: "1000px",
-                transform: mousePosition.x !== 0 ? `rotateY(${(mousePosition.x - 0.5) * 5}deg) rotateX(${(mousePosition.y - 0.5) * -5}deg)` : 'none'
-              }}
+              variants={card3d} 
+              initial="rest" 
+              whileHover="hover" 
+              animate="rest"
+              className="w-full max-w-md rounded-xl bg-gradient-to-br from-green-600 to-green-800 p-[2px] shadow-2xl backdrop-blur-lg"
             >
               <div className="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg bg-white px-4 py-6 dark:bg-[#0a1a0a] sm:px-6 adaptive-card">
                 <div className="mb-6 flex items-center justify-between w-full">

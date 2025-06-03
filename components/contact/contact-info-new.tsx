@@ -32,14 +32,14 @@ export function ContactInfo() {
     {
       icon: <Github className="h-5 w-5" />,
       title: "GitHub",
-      value: "github.com/parthsharma",
-      link: "https://github.com/parthsharma"
+      value: "github.com/ksparth12",
+      link: "https://github.com/ksparth12"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       title: "LinkedIn",
-      value: "linkedin.com/in/parthsharma",
-      link: "https://linkedin.com/in/parthsharma"
+      value: "linkedin.com/in/ksparth128",
+      link: "https://linkedin.com/in/ksparth128"
     }
   ];
 

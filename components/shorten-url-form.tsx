@@ -60,7 +60,7 @@ export function ShortenUrlForm() {
   };
 
   return (
-    <div className="container py-4 px-4 sm:px-6 lg:px-8">
+    <div id="url-shortener-box" className="container py-4 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
